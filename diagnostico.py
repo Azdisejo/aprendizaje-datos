@@ -34,3 +34,27 @@ print(precio_final(100000))
 print(precio_final(100000, 10))
 print(precio_final(250000, 25))
 # %%
+def precio_promedio(total_ventas, unidades):
+    try:
+        promedio = total_ventas / unidades
+    except ZeroDivisionError:
+        print("No hay unidades")
+        return 0
+    
+    return promedio
+print(precio_promedio(500000, 4))
+print(precio_promedio(500000, 0))
+    
+# %%
+with open("ventas.csv", "w") as archivo:
+    archivo.write("Producto,Unidades\n")
+    archivo.write("Estufa A,15\n")
+    archivo.write("Estufa C,42\n")
+    archivo.write("Estufa E,7\n")
+                  
+# %%
+with open("ventas.csv", "r") as archivo:
+    for linea in archivo:
+        print(linea, end="")
+        
+# %%
