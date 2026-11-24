@@ -14,3 +14,15 @@ ventas_con_iva = [round(x*1.19, 2) for x in ventas if x > 0]
 # %%
 print(ventas_con_iva)
 # %%
+stock = {"Estufa A": 15, "Estufa B": 0, "Estufa C": 42, "Estufa D": 0, "Estufa E": 7}
+con_stock={}
+for nombre, cantidad in stock.items():
+    if cantidad > 0:
+        con_stock[nombre] = cantidad
+print(con_stock)
+# %%
+con_stock = {nombre: cantidad for nombre, cantidad in stock.items() if cantidad > 0}
+# %%
+print(con_stock)
+
+# %%
