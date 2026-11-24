@@ -58,3 +58,22 @@ with open("ventas.csv", "r") as archivo:
         print(linea, end="")
         
 # %%
+from utilidades import precio_final
+
+print(precio_final(80000, 15))
+# %%
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self.nombre = nombre
+        self.precio = precio
+        self.stock = stock
+
+    def valor_inventario(self):
+        return self.precio * self.stock
+    
+estufa_a = Producto("Estufa A", 89990, 15)
+estufa_c = Producto("Estufa C", 129990, 42)
+print(estufa_a.nombre, estufa_a.valor_inventario())
+print(estufa_c.nombre, estufa_c.valor_inventario())
+
+# %%
