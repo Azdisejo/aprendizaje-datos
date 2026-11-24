@@ -26,3 +26,11 @@ con_stock = {nombre: cantidad for nombre, cantidad in stock.items() if cantidad 
 print(con_stock)
 
 # %%
+def precio_final(precio, descuento=0):
+    resultado = (precio * (1 - descuento/100)) * 1.19
+    return resultado
+
+print(precio_final(100000))
+print(precio_final(100000, 10))
+print(precio_final(250000, 25))
+# %%
