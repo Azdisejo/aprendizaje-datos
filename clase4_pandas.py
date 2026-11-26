@@ -31,5 +31,6 @@ df.groupby("region")["ingreso"].sum()
 # %%
 df.groupby("producto")["ingreso"].sum()
 # %%
-df.sort_values(df.groupby("mes")["unidades"].sum(), ascending=False).head(1)
+df.groupby("mes")["unidades"].sum().sort_values(ascending=False)
 # %%
+
